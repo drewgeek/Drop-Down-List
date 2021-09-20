@@ -1,0 +1,36 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drop Down List</title>
+  </head>
+  <style>
+    body {
+      background-color: #ffffff;
+    }
+
+    #some_selector {
+      width: 100%;
+      height: 30px;
+      background-color: #f1e7e7;
+    }
+  </style>
+  <body>
+    <select id="some_selector"></select>
+    <option value="">
+      <script>
+        function getSelectValue() {
+          var select = "";
+          for (i = 1; i <= 1000; i++) {
+            select += "<option value=" + i + ">" + i + "</option>";
+          }
+
+          document.querySelector("#some_selector").innerHTML = select;
+        }
+
+        getSelectValue();
+      </script>
+    </option>
+  </body>
+</html>
